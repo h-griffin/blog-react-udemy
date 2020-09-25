@@ -14,26 +14,23 @@
 - [burger-builder-udemy : basic](https://github.com/h-griffin/burger-builder-udemy/tree/basic)
 
 ## 9 -HTTP / Ajax 
+- dummy backend data from [jsonplaceholder](https://jsonplaceholder.typicode.com/)
 
-dummy backend data from [jsonplaceholder](https://jsonplaceholder.typicode.com/)
-
-[axios docs](https://github.com/axios/axios)
-
-GET 1 required : url
-
-GET is async but react runs sync, it does not paus/wait for data back therefore cannot store in const
-
-GET returns a promise, chain off of the promise
-
-set global configs in ```index.js``` like base url
-
-use axios instances if different from base url in ```axios.js```
+    #### Notes
+    - [http - ajax](notes/http-ajax.md)
+    #### Useful Resources & Links
+    - [axios docs](https://github.com/axios/axios)
 
 ### 10 -Burger Builder : Server
 - [burger-builder-udemy : server](https://github.com/h-griffin/burger-builder-udemy/tree/server)
 
 ## 11 -Routing
-- [routing](/notes/routing.md)
-- [absolute vs relative paths](/notes/absolute-vs-relative-paths.md)
-- [parsing query parameters & the fragment](notes/query-params.md)
-
+- [lazy loading with react.lazy](https://github.com/h-griffin/lazy-loading-react-udemy)
+- [lazy app.js](notes/code/lazy-app.js)
+    #### Notes
+    - [routing](/notes/routing.md)
+    - [absolute vs relative paths](/notes/absolute-vs-relative-paths.md)
+    - [parsing query parameters & the fragment](notes/query-params.md)
+    
+    #### Useful Resources & Links
+    - [react router docs](https://reacttraining.com/react-router/web/guides/philosophy)
