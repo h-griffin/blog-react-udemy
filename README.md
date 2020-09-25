@@ -11,16 +11,13 @@
 - [udemy-react](https://github.com/h-griffin/udemy-react)
 
 ### 8 -Burger Builder : Basic
-- [burger-builder-udemy](https://github.com/h-griffin/burger-builder-udemy)
+- [burger-builder-udemy : basic](https://github.com/h-griffin/burger-builder-udemy/tree/basic)
 
-## 9 HTTP / Ajax 
+## 9 -HTTP / Ajax 
 
 dummy backend data from [jsonplaceholder](https://jsonplaceholder.typicode.com/)
 
-
 [axios docs](https://github.com/axios/axios)
-
-
 
 GET 1 required : url
 
@@ -32,5 +29,11 @@ set global configs in ```index.js``` like base url
 
 use axios instances if different from base url in ```axios.js```
 
+### 10 -Burger Builder : Server
+- [burger-builder-udemy : server](https://github.com/h-griffin/burger-builder-udemy/tree/server)
 
+## 11 -Routing
+- [routing](/notes/routing.md)
+- [absolute vs relative paths](/notes/absolute-vs-relative-paths.md)
+- [parsing query parameters & the fragment](notes/query-params.md)
 
