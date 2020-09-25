@@ -7,12 +7,21 @@ class FullPost extends Component {
         loadedPost: null,
     }
 
+    componentDidMount(){
+        console.log('[fullpost] component did mount', this.props)
+        this.loadData();
+    }   
+
     componentDidUpdate(){
-        //set state inside makes infinite update loop
-        if(this.props.id){
-            // if no post or we do but id is new/different
-            if ( !this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id !== this.props.id) ) {
-                axios.get('/posts/' + this.props.id) //base url >> index.js
+        this.loadData();
+    }
+
+    loadData(){
+        //set state inside didupdate makes infinite update loop
+        if(this.props.match.params.id){
+            // if no post or we do but id is new/different                            num      != +num     str
+            if ( !this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id !== +this.props.match.params.id) ) {
+                axios.get('/posts/' + this.props.match.params.id) //base url >> index.js
                     .then(response => {
                         // console.log(response);
                         this.setState({loadedPost: response.data});
@@ -22,7 +31,7 @@ class FullPost extends Component {
     }
 
     deletePostHandler= () => {
-        axios.delete('/posts/' + this.props.id) //base url >> index.js
+        axios.delete('/posts/' + this.props.match.params.id) //base url >> index.js
             .then(response => {
                 console.log('[deletePostHandler] deleted!', response);
             })
@@ -32,7 +41,7 @@ class FullPost extends Component {
         let post = <p style={{textAlign: 'center'}}>Please select a Post!</p>;
 
         // if post is found (data not ready)
-        if (this.props.id){
+        if (this.props.match.params.id){
             post = <p style={{textAlign: 'center'}}>Loading...</p>
         }
 
